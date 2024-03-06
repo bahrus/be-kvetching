@@ -1,6 +1,6 @@
 {
   "name": "be-kvetching",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Turns the tag it adorns into a web component that inherits from [k-fetch](https://github.com/bahrus/k-fetch)",
   "keywords": [
     "web-components",
@@ -13,7 +13,7 @@
   ],
   "main": "be-kvetching.js",
   "module": "be-kvetching.js",
-  "exports":{
+  "exports": {
     ".": "./be-kvetching.js",
     "./behivior": "./behivior.js",
     "./be-kvetching.js": "./be-kvetching.js"
