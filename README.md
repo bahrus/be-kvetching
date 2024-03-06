@@ -4,7 +4,7 @@
 
 ```html
 <medical-prescriptions zero=name
-    be-kvetching 
+    enh-be-kvetching 
     href="https://my-website.com/prescriptions/patient/zero">
 <medical-prescriptions>
 

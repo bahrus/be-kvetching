@@ -11,6 +11,21 @@ export class BeKvetching extends BE<AP, Actions> implements Actions{
             isParsedProp: 'isParsed'
         } as BEConfig;
     }
+
+    async register(self: this): ProPAP {
+        const {enhancedElement} = self;
+        const {localName} = enhancedElement;
+        if(customElements.get(localName) === undefined){
+            const {KFetch} = await import('k-fetch/k-fetch.js');
+            customElements.define(localName, class extends KFetch{
+
+            });
+        }
+        
+        return{
+            resolved: true,
+        }
+    }
 }
 
 export interface BeKvetching extends AllProps{}
@@ -28,6 +43,8 @@ const xe = new XE<AP, Actions>({
             ...propInfo,
         },
         actions:{
+            register: 'isParsed',
         }
-    }
+    },
+    superclass: BeKvetching,
 });

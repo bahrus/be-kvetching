@@ -6,7 +6,7 @@ export interface EndUserProps extends IBE{
 }
 
 export interface AllProps extends EndUserProps{
-
+    isParsed?: boolean,
 }
 
 export type WithStatement = string;
@@ -20,5 +20,5 @@ export type ProPAP = Promise<PAP>;
 export type POA = [PAP | undefined, ActionOnEventConfigs<PAP, Actions>];
 
 export interface Actions{
-
+    register(self: this): ProPAP;
 }

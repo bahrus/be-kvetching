@@ -8,6 +8,18 @@ export class BeKvetching extends BE {
             isParsedProp: 'isParsed'
         };
     }
+    async register(self) {
+        const { enhancedElement } = self;
+        const { localName } = enhancedElement;
+        if (customElements.get(localName) === undefined) {
+            const { KFetch } = await import('k-fetch/k-fetch.js');
+            customElements.define(localName, class extends KFetch {
+            });
+        }
+        return {
+            resolved: true,
+        };
+    }
 }
 export const tagName = 'be-kvetching';
 const xe = new XE({
@@ -20,6 +32,9 @@ const xe = new XE({
         propInfo: {
             ...propInfo,
         },
-        actions: {}
-    }
+        actions: {
+            register: 'isParsed',
+        }
+    },
+    superclass: BeKvetching,
 });
