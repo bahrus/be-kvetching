@@ -15,7 +15,7 @@ export class BeKvetching extends BE<AP, Actions> implements Actions{
     async register(self: this): ProPAP {
         const {enhancedElement} = self;
         const {localName} = enhancedElement;
-        const inherits = enhancedElement.getAttribute('inherits') || (<any>window)['be-kvetching']?.getAttribute('inherits');
+        const inherits = enhancedElement.getAttribute('inherits') || (<any>window)['be-kvetching']?.dataset?.inherits;
         if(inherits){
             const inheritFrom = await customElements.whenDefined(inherits);
             customElements.define(localName, class extends inheritFrom{});

@@ -26,7 +26,7 @@ be-kvetching can be instructed to use this custom web component definition, inst
 
 ### Approach 1 (DRY)
 
-Somewhere in the document (probably ideally within the head tag at the top), add a "link" tag (or any other tag really) with id be-kvetching.  For example:
+Somewhere in the document (probably ideally within the head tag at the top), add a "link" tag (or any other tag really) with id be-kvetching, and attribute data-inherits.  For example:
 
 ```html
 <html>

@@ -11,7 +11,7 @@ export class BeKvetching extends BE {
     async register(self) {
         const { enhancedElement } = self;
         const { localName } = enhancedElement;
-        const inherits = enhancedElement.getAttribute('inherits') || window['be-kvetching']?.getAttribute('inherits');
+        const inherits = enhancedElement.getAttribute('inherits') || window['be-kvetching']?.dataset?.inherits;
         if (inherits) {
             const inheritFrom = await customElements.whenDefined(inherits);
             customElements.define(localName, class extends inheritFrom {
