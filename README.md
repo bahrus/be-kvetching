@@ -18,11 +18,11 @@
 
 ## Using a custom web component to extend. [TODO]
 
-The *k-fetch* is a fairly non-opinionated web component.  But often times any particular app will want to make particular choices as far as how to define the base url for all the fetch requests, credentials, JWT headers, etc.  k-fetch provides many small methods that can be overridden to allow this to be customized according to such needs.
+The *k-fetch* web component is a fairly non-opinionated web component.  But often times any particular app will want to make particular choices as far as how to define the base url for all the fetch requests, credentials, JWT headers, etc.  k-fetch provides [many small methods](https://github.com/bahrus/k-fetch/blob/baseline/k-fetch.ts) that can be overridden to allow this to be customized according to such needs.
 
 Such app's can define their own web component, most likely extending k-fetch.
 
-be-kvetching can be instructed to use this custom web component as the base in two ways:
+be-kvetching can be instructed to use this custom web component definition, instead of the default k-fetch, via two alternate ways (or combine as needs warrant):
 
 ### Approach 1 (DRY)
 
