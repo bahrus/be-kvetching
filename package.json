@@ -26,8 +26,8 @@
   "dependencies": {
     "be-enhanced": "0.0.69",
     "be-hive": "0.0.138",
-    "k-fetch": "0.0.9",
-    "trans-render": "0.0.742",
+    "k-fetch": "0.0.10",
+    "trans-render": "0.0.743",
     "xtal-element": "0.0.598"
   },
   "devDependencies": {
