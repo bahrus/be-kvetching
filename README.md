@@ -16,7 +16,7 @@
 </medical-prescriptions>
 ```
 
-## Using a custom web component to extend. [TODO]
+## Using a custom web component to extend. [Untested]
 
 The *k-fetch* web component is a fairly non-opinionated web component.  But often times any particular app will want to make particular choices as far as how to define the base url for all the fetch requests, credentials, JWT headers, etc.  k-fetch provides [many small methods](https://github.com/bahrus/k-fetch/blob/baseline/k-fetch.ts) that can be overridden to allow this to be customized according to such needs.
 

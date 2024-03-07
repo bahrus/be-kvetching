@@ -11,10 +11,18 @@ export class BeKvetching extends BE {
     async register(self) {
         const { enhancedElement } = self;
         const { localName } = enhancedElement;
-        if (customElements.get(localName) === undefined) {
-            const { KFetch } = await import('k-fetch/k-fetch.js');
-            customElements.define(localName, class extends KFetch {
+        const inherits = enhancedElement.getAttribute('inherits') || window['be-kvetching']?.getAttribute('inherits');
+        if (inherits) {
+            const inheritFrom = await customElements.whenDefined(inherits);
+            customElements.define(localName, class extends inheritFrom {
             });
+        }
+        else {
+            if (customElements.get(localName) === undefined) {
+                const { KFetch } = await import('k-fetch/k-fetch.js');
+                customElements.define(localName, class extends KFetch {
+                });
+            }
         }
         return {
             resolved: true,
