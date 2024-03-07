@@ -9,6 +9,8 @@ export class BeKvetching extends BE {
         };
     }
     async register(self) {
+        //TODO:  this seems like a nice shareable function that could be used in other scenarios.
+        //move to trans-render?
         const { enhancedElement } = self;
         const { localName } = enhancedElement;
         const inherits = enhancedElement.getAttribute('inherits') || window['be-kvetching']?.dataset?.inherits;

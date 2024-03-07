@@ -13,6 +13,8 @@ export class BeKvetching extends BE<AP, Actions> implements Actions{
     }
 
     async register(self: this): ProPAP {
+        //TODO:  this seems like a nice shareable function that could be used in other scenarios.
+        //move to trans-render?
         const {enhancedElement} = self;
         const {localName} = enhancedElement;
         const inherits = enhancedElement.getAttribute('inherits') || (<any>window)['be-kvetching']?.dataset?.inherits;
