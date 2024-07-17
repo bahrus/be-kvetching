@@ -1,4 +1,4 @@
-# be-kvetching
+# be-kvetching (😤)
 
 *be-kvetching* turns the tag it adorns into a web component that inherits from [k-fetch](https://github.com/bahrus/k-fetch).
 
@@ -48,3 +48,4 @@ specify the custom element name to inherit from within the adorned tag itself:
     onerror
     href="https://my-website.com/prescriptions/patient/zero">
 <medical-prescriptions>
+```
