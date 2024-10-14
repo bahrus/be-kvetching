@@ -1,4 +1,4 @@
-# be-kvetching (😤)
+# be-kvetching
 
 *be-kvetching* turns the tag it adorns into a web component that inherits from [k-fetch](https://github.com/bahrus/k-fetch).
 
