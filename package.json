@@ -1,6 +1,6 @@
 {
   "name": "be-kvetching",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Turns the tag it adorns into a web component that inherits from [k-fetch](https://github.com/bahrus/k-fetch)",
   "keywords": [
     "web-components",
