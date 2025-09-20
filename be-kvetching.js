@@ -19,7 +19,7 @@ class BeKvetching extends BE {
             isParsed: true
         },
         compacts:{
-            when_isParsed_changes_invoke_register: 0
+            when_isParsed_changes_call_register: 0
         }
     };
 
